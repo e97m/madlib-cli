@@ -17,7 +17,7 @@ def parse_template(str):
 
 
 def take_inputs(words_list):
-    # This function is Zaid's idea, I sow it and found that it is reasanable to add it to my code
+    # This function is Zaid's idea, I sow it and found that it is reasanable to add it to my code. The rest code is totally mine.
     taken_inputs = []
     for word in words_list:
         new_input = input(f'Enter a/an {word} > ')
