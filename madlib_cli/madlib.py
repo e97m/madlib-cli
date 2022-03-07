@@ -38,7 +38,7 @@ print('''
 *********************************************************************
 ''')
 
-# the_text = read_template("./assets/dark_and_stormy_night_template.txt")
-# new_str, words_list = parse_template(the_text)
-# taken_inputs = take_inputs(words_list)
-# print((f'\n*********************************************************************\n The final result is: \n {merge(new_str,taken_inputs)} \n'))
+if __name__ == "__main__": 
+    parsed_text, words_list = parse_template(read_template("./assets/dark_and_stormy_night_template.txt")) # you can try the path: ./assets/midlib.txt
+    taken_inputs = take_inputs(words_list)
+    print((f'\n*********************************************************************\n The final result is: \n {merge(parsed_text,taken_inputs)} \n'))
