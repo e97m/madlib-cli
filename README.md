@@ -12,3 +12,6 @@ This application is a game that takes random values from the user and create a p
 
 There is a test file to test this code using pytest, the code is set to pass these tests. If you want to play the game uncomment the last 4 lines in the code then run it.
 
+<br>
+
+https://github.com/e97m/madlib-cli/pull/1 
