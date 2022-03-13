@@ -33,12 +33,17 @@ def take_inputs(words_list):
     Input: a tuple of the missing words.
     Output: a list of the usre inputs.
     '''
-    # This function is Zaid's idea, I sow it and found that it is reasanable to add it to my code. The rest code is totally mine.
-    taken_inputs = []
-    for word in words_list:
-        new_input = input(f'Enter a/an {word} > ')
-        taken_inputs.append(new_input)
+    # Yahia inhanced solution
+    taken_inputs = [input(f'Enter a/an {word} > ') for word in words_list]
     return taken_inputs
+
+    # This function is Zaid's idea, I sow it and found that it is reasanable to add it to my code. The rest code is totally mine.
+    # taken_inputs = []
+    # for word in words_list:
+    #     new_input = input(f'Enter a/an {word} > ')
+    #     taken_inputs.append(new_input)
+    # return taken_inputs
+
 
 
 def merge(str, inputs):
@@ -49,6 +54,11 @@ def merge(str, inputs):
     '''
     final_text = str.format(*inputs)
     return final_text
+
+
+def write_file(txst):
+    with open('./assets/filled-out-file.txt', 'w') as f:
+        new_file = f.write(txst)
 
 
 print('''
@@ -63,3 +73,4 @@ if __name__ == "__main__":
     parsed_text, words_list = parse_template(read_template("./assets/madlib.txt"))
     taken_inputs = take_inputs(words_list)
     print((f'\n*********************************************************************\n The final result is: \n {merge(parsed_text,taken_inputs)} \n'))
+    write_file(merge(parsed_text,taken_inputs))
